@@ -7,3 +7,6 @@ https://www.desmos.com/calculator/i9pwenswgj
 ## Progress Updates
 ### 2025-08-15 20:04: https://www.desmos.com/calculator/5u33fv55jd
 Able to draw numbers in the graph. Better hope it's a nine because that's all it ever says.
+
+### 2025-08-15 23:49: https://www.desmos.com/calculator/uvgmnkgtgk
+Added a basic kernel system. Also added draw and clear buttons.
