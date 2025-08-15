@@ -10,3 +10,6 @@ Able to draw numbers in the graph. Better hope it's a nine because that's all it
 
 ### 2025-08-15 23:49: https://www.desmos.com/calculator/uvgmnkgtgk
 Added a basic kernel system. Also added draw and clear buttons.
+
+### 2025-08-16 01:32: https://www.desmos.com/calculator/l0myxs7wb6
+Vastly improved the drawing system with antialiasing.
