@@ -13,3 +13,6 @@ Added a basic kernel system. Also added draw and clear buttons.
 
 ### 2025-08-16 01:32: https://www.desmos.com/calculator/l0myxs7wb6
 Vastly improved the drawing system with antialiasing.
+
+### 2025-08-16 10:40: https://www.desmos.com/calculator/nadsjwfvoc
+Convolutions system and MaxPool2D.
