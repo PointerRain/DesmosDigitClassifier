@@ -16,3 +16,6 @@ Vastly improved the drawing system with antialiasing.
 
 ### 2025-08-16 10:40: https://www.desmos.com/calculator/nadsjwfvoc
 Convolutions system and MaxPool2D.
+
+### 2025-08-16 12:22: https://www.desmos.com/calculator/zf6bgbivra
+Added all the layers, relu, and softmax. Now it thinks everything is a seven though.
