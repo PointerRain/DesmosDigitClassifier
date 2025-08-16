@@ -1,6 +1,4 @@
 import keras
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import tensorflow_datasets as tfds
@@ -10,10 +8,10 @@ IM_SIZE = 28
 
 KERNEL_SIZE = 5
 
-BATCH_SIZE = 32
-EPOCHS = 5
+BATCH_SIZE = 128
+EPOCHS = 20
 
-TEST_NUM = 3
+TEST_NUM = 5
 
 # Construct a tf.data.Dataset
 (train, test), info = tfds.load(
@@ -44,7 +42,7 @@ test = test.prefetch(tf.data.AUTOTUNE)
 for example in train.take(1):
     image, label = example[0], example[1]
 
-# Let's Visualize some examples
+# Visualize some examples
 # i = 1
 # print(f"Number: {int(label[i])}\n")
 #
@@ -53,22 +51,12 @@ for example in train.take(1):
 
 # Build the model
 model = keras.models.Sequential([
-    # keras.layers.Conv2D(32, (5, 5), padding='same', activation='relu', input_shape=(28, 28, 1)),
-    # keras.layers.Conv2D(32, (5, 5), padding='same', activation='relu'),
-    # keras.layers.MaxPool2D(),
-    # keras.layers.Dropout(0.25),
-    # keras.layers.Conv2D(64, (3, 3), padding='same', activation='relu'),
-    # keras.layers.Conv2D(64, (3, 3), padding='same', activation='relu'),
-    # keras.layers.MaxPool2D(strides=(2, 2)),
-    # keras.layers.Dropout(0.25),
-    # keras.layers.Flatten(),
-    # keras.layers.Dense(128, activation='relu'),
-    # keras.layers.Dropout(0.5),
-    # keras.layers.Dense(NUM_CLASSES, activation='softmax')
-
-
-    # keras.layers.Conv2D(32, (5, 5), padding='same', activation='relu', input_shape=(IM_SIZE, IM_SIZE, 1)),
-    # keras.layers.MaxPool2D(),
+    keras.layers.Conv2D(4, (KERNEL_SIZE, KERNEL_SIZE), padding='same', activation='relu', input_shape=(IM_SIZE, IM_SIZE, 1)),
+    keras.layers.MaxPool2D(),
+    keras.layers.Dropout(0.2),
+    # keras.layers.Conv2D(4, (KERNEL_SIZE, KERNEL_SIZE), padding='same', activation='relu', input_shape=(IM_SIZE, IM_SIZE, 1)),
+    keras.layers.MaxPool2D(),
+    # keras.layers.Dropout(0.2),
 
     keras.layers.Flatten(),
     keras.layers.Dense(10, activation='relu'),
@@ -76,7 +64,7 @@ model = keras.models.Sequential([
     keras.layers.Dense(NUM_CLASSES, activation='softmax')
 ])
 
-model.compile(optimizer=tf.keras.optimizers.RMSprop(epsilon=1e-08),
+model.compile(optimizer=tf.keras.optimizers.Adam(epsilon=1e-08),
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=[tf.keras.metrics.SparseCategoricalAccuracy()])
 
