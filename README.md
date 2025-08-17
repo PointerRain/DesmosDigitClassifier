@@ -11,6 +11,14 @@ Each layer is implemented in Desmos using a combination of functions and lists.
 The convolutional layer uses a kernel to convolve the input image, the max pooling layers downsample the feature maps, and the fully connected layers compute the final prediction.
 The model is trained using the MNIST dataset in Python Keras.
 
+<p align="center">
+    <img src="./thats_a_four.png" style="width: 50%; height: auto;" alt="That's a 4" title="Yes, yes it is."/><br>
+    Yes, yes it is.<br><br>
+    <img src="./this_looks_less_like_a_four.png" style="width: 50%; height: auto;" alt="Convolution of a 4" title="This looks less like a 4."/><br>
+    This looks less like a 4. (But it still is!)
+</p>
+
+
 ## Progress Updates
 ### 2025-08-15 20:04: https://www.desmos.com/calculator/5u33fv55jd
 Able to draw numbers in the graph. Better hope it's a nine because that's all it ever says.
@@ -32,6 +40,9 @@ Fixed all the bugs and added a prediction display.
 
 ### 2025-08-17 11:23: https://www.desmos.com/calculator/crfocxf2l8
 Clean up and optimisation.
+
+### 2025-08-17 13:29: https://www.desmos.com/calculator/n1j1scpjtn
+Optimisations and aligning the output display.
 
 ## References
 - [Desmos Graphing Calculator](https://www.desmos.com/calculator)
