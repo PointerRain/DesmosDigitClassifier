@@ -22,3 +22,6 @@ Added all the layers, relu, and softmax. Now it thinks everything is a seven tho
 
 ### 2025-08-16 18:11: https://www.desmos.com/calculator/q25rrksqvf
 Fixed all the bugs and added a prediction display.
+
+### 2025-08-17 11:23: https://www.desmos.com/calculator/crfocxf2l8
+Clean up and optimisation.
